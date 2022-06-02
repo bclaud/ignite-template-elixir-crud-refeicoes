@@ -15,7 +15,7 @@ defmodule ExmealWeb.MealsViewTest do
 
     assert %{
              meal: %{
-               meal: %Meal{
+               meal: %{
                  calories: 20,
                  date: ~D[2001-05-02],
                  description: "Banana",
@@ -30,10 +30,10 @@ defmodule ExmealWeb.MealsViewTest do
     params = %{description: "Banana", date: "2001-05-02", calories: "20"}
     {_ok, meal} = Exmeal.create_meal(params)
 
-    response = render(MealsView, "meal.json", meal: meal)
+    response = render(MealsView, "show.json", meal: meal)
 
     assert %{
-             meal: %Meal{
+             meal: %{
                calories: 20,
                date: ~D[2001-05-02],
                description: "Banana",
