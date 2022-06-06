@@ -27,6 +27,8 @@ defmodule Exmeal.Meals.DeleteTest do
       response = Exmeal.delete_meal(id)
 
       assert {:error, %Exmeal.Error{result: "Meal not found", status: :not_found}} = response
+
+      # test "When "
     end
   end
 end

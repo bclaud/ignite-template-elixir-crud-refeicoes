@@ -1,5 +1,5 @@
 defmodule Exmeal.Meals.Update do
-  alias Exmeal.{Repo, Error, Meal}
+  alias Exmeal.{Repo, Meal}
   alias Exmeal.Meals.Get
 
   def call(%{"id" => id} = params) do
@@ -13,7 +13,4 @@ defmodule Exmeal.Meals.Update do
   end
 
   defp handle_update({:ok, %Meal{}} = result), do: result
-
-  defp handle_update({:error, %Ecto.Changeset{} = changeset}),
-    do: {:error, %Error{status: :bad_request, result: changeset}}
 end

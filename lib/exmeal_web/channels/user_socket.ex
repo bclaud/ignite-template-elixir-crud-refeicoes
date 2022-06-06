@@ -1,6 +1,7 @@
 defmodule ExmealWeb.UserSocket do
   use Phoenix.Socket
 
+  # coveralls-ignore-start
   ## Channels
   # channel "room:*", ExmealWeb.RoomChannel
 
@@ -32,4 +33,5 @@ defmodule ExmealWeb.UserSocket do
   # Returning `nil` makes this socket anonymous.
   @impl true
   def id(_socket), do: nil
+  # coveralls-ignore-stop
 end

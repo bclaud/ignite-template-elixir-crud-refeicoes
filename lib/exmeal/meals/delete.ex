@@ -1,5 +1,5 @@
 defmodule Exmeal.Meals.Delete do
-  alias Exmeal.{Repo, Meal, Error}
+  alias Exmeal.{Repo, Meal}
   alias Exmeal.Meals.Get
 
   def call(id) do
@@ -12,7 +12,4 @@ defmodule Exmeal.Meals.Delete do
   end
 
   defp handle_delete({:ok, %Meal{}} = result), do: result
-
-  defp handle_delete({:error, %Ecto.Changeset{} = changeset}),
-    do: {:error, %Error{status: :bad_request, result: changeset}}
 end

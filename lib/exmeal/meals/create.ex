@@ -11,5 +11,5 @@ defmodule Exmeal.Meals.Create do
   defp handle_insert({:ok, %Meal{}} = result), do: result
 
   defp handle_insert({:error, %Ecto.Changeset{} = changeset}),
-    do: {:error, %Error{status: :bad_request, result: changeset}}
+    do: {:error, Error.build(:bad_request, changeset)}
 end

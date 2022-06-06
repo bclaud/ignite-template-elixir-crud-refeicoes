@@ -3,7 +3,7 @@ defmodule Exmeal.Meals.Get do
 
   def by_id(id) do
     case Repo.get(Meal, id) do
-      nil -> {:error, %Error{status: :not_found, result: "Meal not found"}}
+      nil -> {:error, Error.build(:not_found, "Meal not found")}
       meal -> {:ok, meal}
     end
   end
