@@ -1,4 +1,5 @@
 defmodule Exmeal.Error do
+  @type t :: %__MODULE__{}
   @enforce_keys [:status, :result]
 
   defstruct [:status, :result]
