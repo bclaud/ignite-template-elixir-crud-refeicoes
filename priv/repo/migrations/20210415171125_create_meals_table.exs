@@ -6,6 +6,9 @@ defmodule Exmeal.Repo.Migrations.CreateMealsTable do
       add(:description, :string)
       add(:date, :date)
       add(:calories, :integer)
+      add(:user_id, references(:users))
+
+      timestamps()
     end
   end
 end

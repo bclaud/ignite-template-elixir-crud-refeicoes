@@ -10,6 +10,9 @@ defmodule Exmeal.Meal do
     field(:description, :string)
     field(:date, :date)
     field(:calories, :integer)
+    belongs_to(:user, Exmeal.User)
+
+    timestamps()
   end
 
   def changeset(params, meal \\ %__MODULE__{}) do

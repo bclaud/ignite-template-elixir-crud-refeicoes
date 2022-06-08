@@ -12,6 +12,9 @@ defmodule Exmeal.User do
     field(:nome, :string)
     field(:cpf, :string)
     field(:email, :string)
+    has_many(:meals, Exmeal.Meal)
+
+    timestamps()
   end
 
   def changeset(user \\ %__MODULE__{}, params) do

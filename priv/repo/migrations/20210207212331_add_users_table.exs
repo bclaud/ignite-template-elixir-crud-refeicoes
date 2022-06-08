@@ -6,6 +6,8 @@ defmodule Exmeal.Repo.Migrations.AddUsersTable do
       add(:nome, :string)
       add(:cpf, :string)
       add(:email, :string)
+
+      timestamps()
     end
 
     create(index(:users, [:email]))
