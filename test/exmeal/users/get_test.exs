@@ -17,7 +17,7 @@ defmodule Exmeal.Users.GetTest do
               %Exmeal.User{
                 cpf: "12345678900",
                 email: "jp@banana.com",
-                nome: "Jp",
+                name: "Jp",
                 id: ^id
               }} = response
     end

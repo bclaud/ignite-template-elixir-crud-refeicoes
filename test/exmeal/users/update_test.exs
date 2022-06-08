@@ -11,13 +11,13 @@ defmodule Exmeal.User.UpdateTest do
 
       {:ok, %User{id: id}} = Exmeal.create_user(user_params)
 
-      response = Exmeal.update_user(%{"id" => id, "nome" => "Jp Alves"})
+      response = Exmeal.update_user(%{"id" => id, "name" => "Jp Alves"})
 
       assert {:ok,
               %Exmeal.User{
                 cpf: "12345678900",
                 email: "jp@banana.com",
-                nome: "Jp Alves",
+                name: "Jp Alves",
                 id: ^id
               }} = response
     end

@@ -24,7 +24,7 @@ defmodule Exmeal.Factory do
 
   def users_params_factory do
     %{
-      nome: "Jp",
+      name: "Jp",
       email: "jp@banana.com",
       cpf: "12345678900"
     }
@@ -32,7 +32,7 @@ defmodule Exmeal.Factory do
 
   def user_factory do
     %User{
-      nome: "Jp",
+      name: "Jp",
       email: "jp@banana.com",
       cpf: "12345678900",
       id: "69961117-d966-4e2f-ac55-476d4f78dddf"

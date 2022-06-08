@@ -4,12 +4,12 @@ defmodule Exmeal.User do
 
   @type t :: %__MODULE__{}
 
-  @fields [:nome, :cpf, :email]
+  @fields [:name, :cpf, :email]
 
   @primary_key {:id, :binary_id, autogenerate: true}
 
   schema "users" do
-    field(:nome, :string)
+    field(:name, :string)
     field(:cpf, :string)
     field(:email, :string)
     has_many(:meals, Exmeal.Meal)
